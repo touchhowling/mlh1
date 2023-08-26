@@ -75,7 +75,7 @@ from pydantic import BaseModel
 app = FastAPI()
 
 
-@app.post("/")
+@app.get("/")
 async def process_data(input_data:dict):
     result = test_model(input_data)  # Assuming test_model is defined somewhere
     return {"result": result}
