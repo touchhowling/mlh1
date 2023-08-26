@@ -76,12 +76,6 @@ def test_model(example):
     else:
         return "Not Habitable"
 
-from fastapi import FastAPI
-from pydantic import BaseModel
-
-app = FastAPI()
-
-
 @app.get("/")
 async def process_data(input_data:dict):
     result = test_model(input_data)  # Assuming test_model is defined somewhere
